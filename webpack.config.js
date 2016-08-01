@@ -1,4 +1,6 @@
-var config = {
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+module.exports = {
   context: __dirname + "/app",
   entry: "./main.js",
 
@@ -12,13 +14,19 @@ var config = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: ['babel-loader'],
         query: {
           presets: ['react', 'es2015']
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract("css!sass")
       }
     ]
-  }
-};
+  },
 
-module.exports = config;
+  plugins: [
+    new ExtractTextPlugin("styles.css")
+  ]
+};

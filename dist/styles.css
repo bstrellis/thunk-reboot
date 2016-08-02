@@ -1,4 +1,53 @@
-div {
-  background-color: blue;
-  height: 500px;
-  width: 500px; }
+window, html, body, #content {
+  height: 100%;
+  width: 100%; }
+
+button {
+  background-color: #40bf80;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  width: auto; }
+
+.body-component {
+  background-color: #4095bf;
+  height: 100%;
+  width: 100%; }
+
+.header-component {
+  background-color: #40bf55;
+  height: 60px;
+  width: 100%; }
+
+.nav-menu-component {
+  display: flex;
+  flex-direction: column; }
+  .nav-menu-component a {
+    color: white;
+    height: 20px;
+    width: 60px; }
+
+.jumbotron-component {
+  background-color: #cccccc;
+  height: 100%;
+  margin: 0px 180px;
+  width: 600px; }
+
+.create-thunk-component div {
+  background-color: #e57171;
+  border: 1px solid black;
+  height: 100px;
+  width: 400px; }
+
+.thunk-list-component {
+  background-color: #4095bf;
+  height: 100%;
+  margin: 0px 15px;
+  padding: 10px;
+  width: 100%; }
+  .thunk-list-component .thunk-component {
+    background-color: #55bf40;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.75);
+    height: 300px;
+    margin: 10px;
+    width: 95%; }

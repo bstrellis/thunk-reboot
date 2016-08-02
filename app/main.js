@@ -1,21 +1,20 @@
 require("./style.scss");
+var HeaderComponent = require("./header-component.js");
+var JumbotronComponent = require("./jumbotron-component.js");
 
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var Content = React.createClass({
-  render: function() {
-    return (
-      <div>
-        My, thats a lovely toad you have there, sir.
-      </div>
-    );
-  }
-});
-
 class BodyComponent extends React.Component {
   render() {
-    return <div>Hello {this.props.name}</div>;
+    // <CreateThunkComponent />
+    // <ThunkListComponent />
+    return (
+      <div className="body-component">
+        <HeaderComponent />
+        <JumbotronComponent />
+      </div>
+    );
   }
 }
 

@@ -1,5 +1,95 @@
-div {
-  background-color: blue;
-  height: 500px;
-  width: 500px;
+///////////////////
+//               //
+//   constants   //
+//               //
+///////////////////
+
+$basicHue: 200;
+$basicSaturation: 50%;
+$basicLightness: 50%;
+
+$buttonHue: 110;
+$buttonSaturation: 50%;
+$buttonLightness: 50%;
+
+$headerHue: 130;
+$headerSaturation: 50%;
+$headerLightness: 50%;
+
+$generalBorder: 1px solid black;
+$generalBoxShadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+
+window, html, body, #content {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background-color: hsl(150, 50%, 50%);
+  border: $generalBorder;
+  border-radius: 10px;
+  height: 20px;
+  width: auto;
+}
+
+//////////////////////
+//                  //
+//   landing page   //
+//                  //
+//////////////////////
+
+.body-component {
+  background-color: hsl($basicHue, $basicSaturation, $basicLightness);
+  height: 100%;
+  width: 100%;
+}
+
+.header-component {
+  background-color: hsl($headerHue, $headerSaturation, $headerLightness);
+  height: 60px;
+  width: 100%;
+}
+
+.nav-menu-component {
+  // why is this not implementing?
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: hsl(0, 0%, 100%);
+    height: 20px;
+    width: 60px;
+  }
+}
+
+.jumbotron-component {
+  background-color: hsl(50, 0%, 80%);
+  height: 100%;
+  margin: 0px 180px;
+  width: 600px;
+}
+
+.create-thunk-component {
+  div {
+    background-color: hsl(0, 69%, 67%);
+    border: $generalBorder;
+    height: 100px;
+    width: 400px;
+  }
+}
+
+.thunk-list-component {
+  background-color: hsl($basicHue, $basicSaturation, $basicLightness);
+  height: 100%;
+  margin: 0px 15px;
+  padding: 10px;
+  width: 100%;
+
+  .thunk-component {
+    background-color: hsl(110, 50%, 50%);
+    box-shadow: $generalBoxShadow;
+    height: 300px;
+    margin: 10px;
+    width: 95%;
+  }
 }
